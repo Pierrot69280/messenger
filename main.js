@@ -20,6 +20,7 @@ function run() {
         fetchMessages().then(messages => {
             renderMessages(messages)
             deleteBoutton()
+            editMessage()
         })
     }
 }
@@ -219,5 +220,14 @@ function deleteBoutton() {
 
 }
 
+
+async function editMessage (idMessage) {
+
+    let params = {
+        headers: {"Content-type": "application/json", "Authorization": `Bearer ${token}`},
+        method: "EDIT",
+    }
+
+}
 
 run()
